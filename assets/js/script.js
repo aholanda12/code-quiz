@@ -131,6 +131,8 @@ function runClockCb(){
   // we have to stop it at 0
   if(secondsElapsed >= totalSeconds){
     clearInterval(interval);
+    minutesDisplay.textContent = "0";
+    secondsDisplay.textContent = "00";
   }
 }
 
