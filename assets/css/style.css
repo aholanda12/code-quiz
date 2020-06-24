@@ -1,0 +1,16 @@
+.time {
+    float: right;
+    margin-right: 100px;
+    margin-top: 40px;
+  }
+
+  #minutes {
+    font-size: 40px;
+    display: inline-block
+  }
+  
+  #seconds {
+    font-size: 40px;
+    display: inline-block
+  }
+  
