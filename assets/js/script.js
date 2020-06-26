@@ -69,10 +69,14 @@ function buttonHandler(event) {
             initializeQuestion();
             outcome.textContent= "";
         }, 2000);
+        points = points + 100;
+        pointsDisplay.textContent = points;
     }
     else{
         outcome.textContent = "You got it wrong. Try again!";
         subtractTime();
+        points = points - 20;
+        pointsDisplay.textContent = points;
     }
 }
 
@@ -167,3 +171,7 @@ function subtractTime(){
 }
 
 beginButton.addEventListener("click", startTimer);
+
+// SCORE
+var pointsDisplay = document.querySelector("#points");
+var points = 0;
