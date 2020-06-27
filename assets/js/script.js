@@ -207,3 +207,9 @@ submitButton.addEventListener("click", function(event) {
   }
 });
 
+// GAME OVER
+
+if (){
+    document.getElementById("game-over").style.display="block";
+    document.getElementById("quiz-questions").style.display="none";  
+}
