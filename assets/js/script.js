@@ -68,21 +68,26 @@ function buttonHandler(event) {
             questionIndex++;
             initializeQuestion();
             outcome.textContent= "";
-        }, 2000);
+        }, 1000);
         points = points + 100;
         pointsDisplay.textContent = points;
+        scoreDisplay.textContent = points;
     }
     else{
         outcome.textContent = "You got it wrong. Try again!";
         subtractTime();
         points = points - 20;
         pointsDisplay.textContent = points;
+        scoreDisplay.textContent = points;
 
     }
 
     if(questionIndex === questionList.length - 1){
         document.getElementById("game-over").style.display="block";
-        document.getElementById("quiz-questions").style.display="none";  
+        document.getElementById("quiz-questions").style.display="none";
+        minutesDisplay.textContent = "0";
+        secondsDisplay.textContent = "00";  
+        clearInterval(interval);
     }
 }
 
@@ -194,6 +199,7 @@ var submitButton = document.querySelector("#submit-score");
 var msgDiv = document.querySelector("#msg");
 var userEmailSpan = document.querySelector("#user-email");
 var userPasswordSpan = document.querySelector("#user-password");
+var scoreDisplay = document.querySelector("#score");
 
 function displayMessage(type, message) {
   msgDiv.textContent = message;
