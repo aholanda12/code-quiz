@@ -1,41 +1,105 @@
 // create a list of questions and answers
 var questionList = [
     {
-        "question": "1. This is a placement question?",
-        "a": "Wrong.",
-        "b": "Wrong.",
-        "c": "Wrong.",
-        "d": "Correct.",
-        "correct": "d",
-        "userAnswer": null
-    },
-    {
-        "question": "2. This is a placement question?",
-        "a": "Wrong.",
-        "b": "Wrong.",
-        "c": "Correct.",
-        "d": "Wrong.",
+        "question": "1. Where does the name ''Littlefoot'' come from?",
+        "a": "Because he has a little foot.",
+        "b": "It's actually his last name.",
+        "c": "His father was called Littlefoot as a child.",
+        "d": "It was a nickname he gave himself.",
         "correct": "c",
         "userAnswer": null
     },
     {
-        "question": "3. This is a placement question?",
-        "a": "Wrong.",
-        "b": "Correct.",
-        "c": "Wrong.",
-        "d": "Wrong.",
+        "question": "2. What is Cera's dad's canonical name?",
+        "a": "Mr. Topps.",
+        "b": "Dr. Topps.",
+        "c": "Tommy Topps.",
+        "d": "Daddy Topps.",
+        "correct": "d",
+        "userAnswer": null
+    },
+    {
+        "question": "3. Which movies does Chomper appear in?",
+        "a": "II, V, XIV.",
+        "b": "II, VI, XI.",
+        "c": "III, V, XII.",
+        "d": "III, VI, XIII.",
+        "correct": "a",
+        "userAnswer": null
+    },
+    {
+        "question": "4. What is triggered if something happens to Saurus Rock?",
+        "a": "There will be a big rock slide.",
+        "b": "Bad luck will descend upon the Great Valley.",
+        "c": "The lone dinosaur will return.",
+        "d": "A meteor shower.",
         "correct": "b",
         "userAnswer": null
     },
     {
-        "question": "4. This is a placement question?",
-        "a": "Correct.",
-        "b": "Wrong.",
-        "c": "Wrong.",
-        "d": "Wrong.",
+        "question": "5. Which one of these is not a Land Before Time movie title?",
+        "a": "Journey Through the Mists.",
+        "b": "Journey to Big Water.",
+        "c": "Journey of the Brave.",
+        "d": "Journey to Smoking Mountains.",
+        "correct": "d",
+        "userAnswer": null
+    },
+    {
+        "question": "6. Which country singer celebrity made an appearance in The Land Before Time XIV?",
+        "a": "Loretta Lynn",
+        "b": "Dolly Parton.",
+        "c": "Reba McEntire.",
+        "d": "Shania Twain.",
+        "correct": "c",
+        "userAnswer": null
+    },
+    {
+        "question": "7. What is the secret of the rainbowfaces?",
+        "a": "They're space aliens.",
+        "b": "They're sharpteeth in disguise.",
+        "c": "They lived in the Great Valley the whole time.",
+        "d": "They're related to Ducky.",
         "correct": "a",
         "userAnswer": null
+    },
+    {
+        "question": "8. Which one of these characters is not a long neck?",
+        "a": "Littlefoot.",
+        "b": "Tippy.",
+        "c": "Ali.",
+        "d": "Shorty.",
+        "correct": "b",
+        "userAnswer": null
+    },
+    {
+        "question": "9. What is the first natural disaster to befall the Great Valley?",
+        "a": "Landslide.",
+        "b": "Wildfire.",
+        "c": "Flooding.",
+        "d": "Tornado.",
+        "correct": "a",
+        "userAnswer": null
+    },
+    {
+        "question": "10. Who directed the first Land Before Time movie?",
+        "a": "Roy Allen Smith.",
+        "b": "Charles Grosvenor.",
+        "c": "Don Bluth.",
+        "d": "Davis Doi.",
+        "correct": "c",
+        "userAnswer": null
+    },
+    {
+        "question": "Bonus! Which part of the tree is the tree star?",
+        "a": "Roots.",
+        "b": "Trunk.",
+        "c": "Bark.",
+        "d": "Leaf.",
+        "correct": "d",
+        "userAnswer": null
     }
+
 ];
 
 var questionTag = document.body.querySelector("#question");

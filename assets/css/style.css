@@ -67,3 +67,16 @@ ul {
 input {
     margin-left: 5px;
 }
+
+.btn {
+    margin-top: 5px;
+    width: 40px;
+}
+
+#begin {
+    width: 100px;
+}
+
+#submit-score {
+    width: 200px;
+}

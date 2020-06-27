@@ -31,12 +31,13 @@
     <div id ="instructions">
         <div class="row">
             <div class="col-12">
-            <h1>Placement Quiz Title</h1>
+            <h1>Land Before Time Quiz</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Welcome to my quiz! This has been a particularly tough assignment so I am hoping to make an equally tough quiz. The Land Before Time franchise currently has 14 movies in it spanning from the late 80's to the late 2010's. If you were or had a child anywhere in that time period, you've likely seen at least one of these movies. But how much do you know about all of the movies as a whole? Let's find out!</p>
+            <p>You have 10 minutes to complete the quiz. Every time you get an answer right, you will move onto the next question and get 100 points. Every time you get a question wrong, you will lose 20 points, 20 seconds, and will have to try again. The game is over when you answer all the questions or when the timer runs out. Good luck!</p>
             <button type="button" class="btn btn-success" id="begin">Begin</button>
             </div>
         </div>
@@ -46,16 +47,16 @@
         <h1 id="question" data-question=""></h1>
         <ul>
             <li>
-                <button id="button-a" data-answer="a">A: </button>
+                <button id="button-a" data-answer="a" class="btn btn-primary">A: </button>
                 <span id="answer-a"></span></li>
             <li>
-                <button id="button-b" data-answer="b">B: </button>
+                <button id="button-b" data-answer="b" class="btn btn-success">B: </button>
                 <span id="answer-b"></span></li>
             <li>
-                <button id="button-c" data-answer="c">C: </button>
+                <button id="button-c" data-answer="c" class="btn btn-danger">C: </button>
                 <span id="answer-c"></span></li>
             <li>
-                <button id="button-d" data-answer="d">D: </button>
+                <button id="button-d" data-answer="d" class="btn btn-info">D: </button>
                 <span id="answer-d"></span></li>
         </ul>
         <p id="outcome"></p>
@@ -71,7 +72,7 @@
             </div>
             <h2>Score: <div id="score"></div></h2>
             <div id="msg"></div>
-            <button id="submit-score">Submit Score</button>
+            <button id="submit-score" class="btn btn-success">Submit Score</button>
           </form>
     </div>
 
