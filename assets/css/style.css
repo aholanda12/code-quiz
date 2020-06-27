@@ -1,40 +1,13 @@
+/* Main Body */
+
 body {
     background-image: url('../images/background.jpg');
     background-color: #cccccc;
     background-size: cover;
     background-repeat: no-repeat;
-   }
-
-.time {
-    float: right;
-    position: absolute; 
-    right: 2%; 
-    background-color: #FFFFFF;
-    border: 1px solid #DCDCDC;
-    padding: 10px;
-  }
-
-.score-box {
-    background-color: #FFFFFF;
-    border: 1px solid #DCDCDC;
-    padding: 10px;
 }
 
-  #minutes {
-    font-size: 40px;
-    display: inline-block
-  }
-  
-  #seconds {
-    font-size: 40px;
-    display: inline-block
-  }
-
-  #points {
-      text-align: center;
-  }
-
-  .container {
+.container {
     background-color: #FFFFFF;
     border: 1px solid #DCDCDC;
     margin-left: auto;
@@ -47,14 +20,49 @@ body {
 #quiz-questions {
     display: none;
 }
-  
+    
 #game-over {
     display: none;
 }
 
+/* Text Elements */
+
 ul {
     list-style-type: none;
 }
+
+/* Top Bar Score and Timer */
+
+.time {
+    float: right;
+    position: absolute; 
+    right: 2%; 
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    padding: 10px;
+}
+
+.score-box {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    padding: 10px;
+}
+
+#minutes {
+    font-size: 40px;
+    display: inline-block
+}
+  
+#seconds {
+    font-size: 40px;
+    display: inline-block
+}
+
+#points {
+    text-align: center;
+}
+
+/* Game Over Screen */
 
 #score {
     display: inline-block 
@@ -68,9 +76,11 @@ input {
     margin-left: 5px;
 }
 
+/* Buttons */
+
 .btn {
     margin-top: 5px;
-    width: 40px;
+        width: 40px;
 }
 
 #begin {

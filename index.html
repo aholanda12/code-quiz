@@ -16,33 +16,37 @@
 </head>
 <body>
 
+<!-- Top Bar -->
     <nav class="navbar navbar-expand-sm">
-    <div class ="score-box">
-    <h2>Score: <div id="points">0</div></h2>
-    </div>
-    <div class="time">
-        <div id="minutes">10</div>:
-        <div id="seconds">00</div>
-    </div>
+        <div class ="score-box">
+            <h2>Score: <div id="points">0</div></h2>
+        </div>
+        <div class="time">
+            <div id="minutes">10</div>:
+            <div id="seconds">00</div>
+        </div>
     </nav>
 
-    <div class ="container">
+<!-- Main Quiz -->
+<div class ="container">
 
+    <!-- Instructions -->
     <div id ="instructions">
         <div class="row">
             <div class="col-12">
-            <h1>Land Before Time Quiz</h1>
+                <h1>Land Before Time Quiz</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-            <p>Welcome to my quiz! This has been a particularly tough assignment so I am hoping to make an equally tough quiz. The Land Before Time franchise currently has 14 movies in it spanning from the late 80's to the late 2010's. If you were or had a child anywhere in that time period, you've likely seen at least one of these movies. But how much do you know about all of the movies as a whole? Let's find out!</p>
-            <p>You have 10 minutes to complete the quiz. Every time you get an answer right, you will move onto the next question and get 100 points. Every time you get a question wrong, you will lose 20 points, 20 seconds, and will have to try again. The game is over when you answer all the questions or when the timer runs out. Good luck!</p>
-            <button type="button" class="btn btn-success" id="begin">Begin</button>
+                <p>Welcome to my quiz! This has been a particularly tough assignment so I am hoping to make an equally tough quiz. The Land Before Time franchise currently has 14 movies in it spanning from the late 80's to the late 2010's. If you were or had a child anywhere in that time period, you've likely seen at least one of these movies. But how much do you know about all of the movies as a whole? Let's find out!</p>
+                <p>You have 10 minutes to complete the quiz. Every time you get an answer right, you will move onto the next question and get 100 points. Every time you get a question wrong, you will lose 20 points, 20 seconds, and will have to try again. The game is over when you answer all the questions or when the timer runs out. Good luck!</p>
+                <button type="button" class="btn btn-success" id="begin">Begin</button>
             </div>
         </div>
     </div>
 
+    <!-- Quiz Questions -->
     <div id="quiz-questions">
         <h1 id="question" data-question=""></h1>
         <ul>
@@ -62,21 +66,22 @@
         <p id="outcome"></p>
     </div>
 
+    <!-- Game Over -->
     <div id="game-over">
         <h1>Game Over!</h1>
-        <p>Enter your initials and submit your score!</p>
+            <p>Enter your initials and submit your score!</p>
         <form method="POST">
             <div class="input-group">
               <label for="initials">Initials:</label>
               <input type="text" name="initials" id="initials" placeholder="ASH" />
             </div>
-            <h2>Score: <div id="score"></div></h2>
+        </form>
+        <h2>Score: <div id="score"></div></h2>
             <div id="msg"></div>
-            <button id="submit-score" class="btn btn-success">Submit Score</button>
-          </form>
+        <button id="submit-score" class="btn btn-success">Submit Score</button>
     </div>
 
-    </div>
+</div>
 
 </body>
 </html>

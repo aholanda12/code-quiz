@@ -1,4 +1,6 @@
-// create a list of questions and answers
+// QUIZ
+
+// Question List
 var questionList = [
     {
         "question": "1. Where does the name ''Littlefoot'' come from?",
@@ -102,6 +104,7 @@ var questionList = [
 
 ];
 
+// Variables for questions
 var questionTag = document.body.querySelector("#question");
 var answerTagA = document.body.querySelector("#answer-a");
 var answerTagB = document.body.querySelector("#answer-b");
@@ -117,6 +120,7 @@ var outcome = document.body.querySelector("#outcome");
 
 var questionIndex = 0;
 
+// Function for the Quiz
 function buttonHandler(event) {
     var button = event.target;
     var userAnswer = button.getAttribute("data-answer");
@@ -155,11 +159,15 @@ function buttonHandler(event) {
     }
 }
 
+
+// Event Listeners for quiz answers
 buttonA.addEventListener("click",buttonHandler);
 buttonB.addEventListener("click",buttonHandler);
 buttonC.addEventListener("click",buttonHandler);
 buttonD.addEventListener("click",buttonHandler);
 
+
+// Initializing the questions
 function initializeQuestion(){
     console.log(questionList[questionIndex]);
     var wholeObj = questionList[questionIndex];
@@ -180,34 +188,28 @@ function initializeQuestion(){
 initializeQuestion();
 
 
-
-
-
-
-
-
-
-
 // TIMER
 
-var beginButton = document.querySelector("#begin");
+// Variables for the timer
 var minutesDisplay = document.querySelector("#minutes");
 var secondsDisplay = document.querySelector("#seconds");
 var totalSeconds = 0;
 var secondsElapsed = 0;
 var interval;
 
-// this function runs once a second
+var instructionsDisplay = document.querySelector("#instructions");
+var questionsDisplay = document.querySelector("#quiz-questions");
+var beginButton = document.querySelector("#begin");
+
+// Function runs once a second
 function runClockCb(){
 
   secondsElapsed++;
   console.log(secondsElapsed);
 
-  // change the display
   minutesDisplay.textContent = Math.floor((totalSeconds - secondsElapsed) / 60);
   secondsDisplay.textContent = (totalSeconds - secondsElapsed) % 60;
 
-  // we have to stop it at 0
   if(secondsElapsed >= totalSeconds){
     clearInterval(interval);
     minutesDisplay.textContent = "0";
@@ -217,44 +219,36 @@ function runClockCb(){
   }
 }
 
-var instructionsDisplay = document.querySelector("#instructions");
-var questionsDisplay = document.querySelector("#quiz-questions");
-
-
+// Function to start the timer
 function startTimer() {
-  // Write code to start the timer here
 
   var minutes = 10;
-  // set time using totalSeconds
   totalSeconds = minutes * 60;
-  // initialize seconds on the play button
   secondsElapsed = 0;
 
   if(typeof interval !== 'undefined'){
-    // if we have an interval we want to clear it
     clearInterval(interval);
   }
 
-  // keep track of our interval
   interval = setInterval(runClockCb, 1000);
 
   document.getElementById("instructions").style.display="none"; 
   document.getElementById("quiz-questions").style.display="block"; 
 }
 
+beginButton.addEventListener("click", startTimer);
+
+// Function to subtract time
 function subtractTime(){
 
-  //subtractTime
   secondsElapsed = secondsElapsed + 20;
-
-  //change the display
   minutesDisplay.textContent = Math.floor((totalSeconds - secondsElapsed) / 60);
   secondsDisplay.textContent = (totalSeconds - secondsElapsed) % 60;
 }
 
-beginButton.addEventListener("click", startTimer);
+// GAME OVER/SUBMIT SCORE
 
-// SCORE
+// Variables for displaying and submitting score
 var pointsDisplay = document.querySelector("#points");
 var points = 0;
 
@@ -265,6 +259,7 @@ var userEmailSpan = document.querySelector("#user-email");
 var userPasswordSpan = document.querySelector("#user-password");
 var scoreDisplay = document.querySelector("#score");
 
+// Function to tell if items were logged correctly
 function displayMessage(type, message) {
   msgDiv.textContent = message;
   msgDiv.setAttribute("class", type);
@@ -278,11 +273,9 @@ submitButton.addEventListener("click", function(event) {
   if (initials === "") {
     displayMessage("error", "Initials cannot be blank");
   } else {
-    displayMessage("success", "Registered successfully");
+    displayMessage("success", "Submitted successfully");
 
     localStorage.setItem("initials", initials);
     localStorage.setItem("score", points);
   }
 });
-
-// GAME OVER
