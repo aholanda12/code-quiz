@@ -1,8 +1,24 @@
+body {
+    background-image: url('../images/background.jpg');
+    background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+
 .time {
     float: right;
     position: absolute; 
     right: 2%; 
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    padding: 10px;
   }
+
+.score-box {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    padding: 10px;
+}
 
   #minutes {
     font-size: 40px;
@@ -38,4 +54,16 @@
 
 ul {
     list-style-type: none;
+}
+
+#score {
+    display: inline-block 
+}
+
+.input-group {
+    font-size: 20px;
+}
+
+input {
+    margin-left: 5px;
 }
