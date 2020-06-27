@@ -23,4 +23,10 @@
     position: relative;
 }
 
+#quiz-questions {
+    display: none;
+}
   
+#game-over {
+    display: none;
+}

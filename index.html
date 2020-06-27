@@ -25,7 +25,7 @@
 
     <div class ="container">
 
-    <div class ="instructions">
+    <div id ="instructions">
         <div class="row">
             <div class="col-12">
             <h1>Placement Quiz Title</h1>
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div class="quiz-questions">
+    <div id="quiz-questions">
         <h1 id="question" data-question=""></h1>
         <ul>
             <li>
@@ -56,6 +56,20 @@
                 <span id="answer-d"></span></li>
         </ul>
         <p id="outcome"></p>
+    </div>
+
+    <div id="game-over">
+        <h1>Game Over!</h1>
+        <p>Enter your initials and submit your score!</p>
+        <form method="POST">
+            <div class="input-group">
+              <label for="initials">Initials</label>
+              <input type="text" name="initials" id="initials" placeholder="ASH" />
+            </div>
+            <h2>Score: <div id="score"></div></h2>
+            <div id="msg"></div>
+            <button id="submit-score">Submit Score</button>
+          </form>
     </div>
 
     </div>

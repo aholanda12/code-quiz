@@ -140,6 +140,8 @@ function runClockCb(){
   }
 }
 
+var instructionsDisplay = document.querySelector("#instructions");
+var questionsDisplay = document.querySelector("#quiz-questions");
 
 
 function startTimer() {
@@ -158,6 +160,9 @@ function startTimer() {
 
   // keep track of our interval
   interval = setInterval(runClockCb, 1000);
+
+  document.getElementById("instructions").style.display="none"; 
+  document.getElementById("quiz-questions").style.display="block"; 
 }
 
 function subtractTime(){
@@ -175,3 +180,30 @@ beginButton.addEventListener("click", startTimer);
 // SCORE
 var pointsDisplay = document.querySelector("#points");
 var points = 0;
+
+var initialsInput = document.querySelector("#initials");
+var submitButton = document.querySelector("#submit-score");
+var msgDiv = document.querySelector("#msg");
+var userEmailSpan = document.querySelector("#user-email");
+var userPasswordSpan = document.querySelector("#user-password");
+
+function displayMessage(type, message) {
+  msgDiv.textContent = message;
+  msgDiv.setAttribute("class", type);
+}
+
+submitButton.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var initials = document.querySelector("#initials").value;
+
+  if (initials === "") {
+    displayMessage("error", "Initials cannot be blank");
+  } else {
+    displayMessage("success", "Registered successfully");
+
+    localStorage.setItem("initials", initials);
+    localStorage.setItem("score", points);
+  }
+});
+
