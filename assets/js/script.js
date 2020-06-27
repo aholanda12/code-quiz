@@ -77,6 +77,12 @@ function buttonHandler(event) {
         subtractTime();
         points = points - 20;
         pointsDisplay.textContent = points;
+
+    }
+
+    if(questionIndex === questionList.length - 1){
+        document.getElementById("game-over").style.display="block";
+        document.getElementById("quiz-questions").style.display="none";  
     }
 }
 
@@ -137,6 +143,8 @@ function runClockCb(){
     clearInterval(interval);
     minutesDisplay.textContent = "0";
     secondsDisplay.textContent = "00";
+    document.getElementById("game-over").style.display="block";
+    document.getElementById("quiz-questions").style.display="none";
   }
 }
 
@@ -208,8 +216,3 @@ submitButton.addEventListener("click", function(event) {
 });
 
 // GAME OVER
-
-if (){
-    document.getElementById("game-over").style.display="block";
-    document.getElementById("quiz-questions").style.display="none";  
-}
