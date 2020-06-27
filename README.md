@@ -1,1 +1,5 @@
 # code-quiz
+
+In this assignment, we were tasked with creating a quiz that had several functions to be executed with Javascript. This would include a timer, a score count, and responsive questions. It was a rather difficult challenge but one that really pushed me to think, look back at previous activities, and reach out for help. In that regard, I feel much more confident in my Javascript skills after this assignment than I did previously.
+
+Although the assignment called for the quiz to be about Javascript, with Anthony's permission, I decided to change the topic. During quarantine, my partner and I decided to marathon all the Land Before Time movies and it has certainly been an adventure. They were a big part of my childhood growing up and part of the childhoods of many children that I babysat. The fact that it has been going on for so long means that it has been exposed to children and parents across 3 decades, which is pretty unique. Plus, I wanted the quiz to be a little challenging. I hope you enjoy!
